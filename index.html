@@ -427,7 +427,7 @@
         }
       
         const xScale = d3.scaleLinear()
-                         .domain([0,1])
+                         .domain([d3.min(filteredData, d => d[currentMetric]),1])
                          .nice()
                          .range([0, chartWidth]);
       
