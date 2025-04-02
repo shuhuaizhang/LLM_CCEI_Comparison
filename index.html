@@ -180,6 +180,71 @@
     .intro-content strong {
       color: #e74c3c;
     }
+    /* 新增移动端适配样式 */
+    @media screen and (max-width: 768px) {
+      #container {
+        flex-direction: column;  /* 垂直排列 */
+      }
+
+      #filters {
+        width: 100%;  /* 全宽显示 */
+        max-height: none;  /* 取消高度限制 */
+        margin-bottom: 20px;
+      }
+
+      #chart {
+        width: 100%;  /* 全宽显示 */
+        overflow-x: auto;  /* 添加横向滚动 */
+      }
+
+      /* 调整导航按钮 */
+      #nav button {
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      /* 调整筛选器文字大小 */
+      #filters summary {
+        font-size: 14px;
+      }
+
+      #filters .checkbox-group label {
+        font-size: 13px;
+      }
+
+      /* 调整图表标题 */
+      #chart h3 {
+        font-size: 16px;
+      }
+
+      /* 缩小SVG尺寸 */
+      #chart-svg {
+        width: 100%;
+        min-width: 300px;  /* 保持最小可读宽度 */
+      }
+
+      /* 调整坐标轴文字 */
+      .name-label {
+        font-size: 10px !important;
+      }
+
+      /* 介绍页面优化 */
+      .intro-content {
+        padding: 15px;
+      }
+    }
+
+    /* 新增平板适配（可选） */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      #filters {
+        width: 250px;
+      }
+      
+      #chart {
+        min-width: 500px;
+      }
+    }
   </style>
 </head>
 <body>
